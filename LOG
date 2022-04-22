@@ -1,0 +1,708 @@
+NE8>T
+UNZOK!PCK[120]
+table1
+DRAM1_DDR4x2_2400_32B ini_ver: 0x51210723
+zq_trim[e], ldo_trim[6]
+CPU1200 DONE
+>RPA
+table1
+DRAM2_DDR4x2_2400_32B ini_ver: 0x51210723
+ddr2 zq_trim[e], ldo_trim[4]
+ddr init done
+HVYOK
+UNZOK!
+Loader Start ...
+LD_VER 02.00.04
+
+336_DRAM1_1200_8192Mb_8192Mb_DRAM2_1200_8192Mb_8192Mb 11/26/2021 19:46:36
+
+SD identify fail
+card open fail
+EMMC: 8 bits
+EMMC
+RRtmp_addr 0x08000000
+LdCtrl2 0x00000000
+l_bl31
+RRbl31_addr 0x01F00000
+bl31_size 0x00007120
+l_uboot
+Ruboot_addr 0x60000000
+Ruboot_size 0x0007C238
+core_cnt= 0x00000004
+smp(bl31)
+fdt 0x00100000
+shm 0x00A00000
+        core2_jump 0xFE0005C0
+  code2JumpCodelen 0x00000010
+      core2_entry2 0x00010000
+       core2_entry 0xFE0005D0
+ code2EntryCodelen 0x00000188
+      core2_entry2 0x00010000
+bl_core2_reset
+$$$64wfi6464wwffii64core2_jump_program 0x00205325
+64code2JumpCodelen 0x0000018C
+warm reset core0
+jump_entry 0x01F00000
+ARC64warmrwastrwarmrstmrst***3421###NOTICE:  BL31: v2.2(release):
+NOTICE:  BL31: Built : 15:10:58, Oct 29 2021
+NOTICE:  BL31: Found DTB
+NOTICE:  TZASC config:
+NOTICE: 0x00100000@0x01f00000   (RW/N)  Ree
+INFO:    ARM GICv2 driver initialized
+INFO:    BL31: Platform setup done
+INFO:    BL31: Initializing runtime services
+INFO:    BL31: Preparing for EL3 exit to normal world
+INFO:    Entry point address = 0x60000000
+INFO:    SPSR = 0x3c9
+
+
+U-Boot 2019.04 (Jan 28 2022 - 09:00:40 +0000), Build: jenkins-VVTK-NT98336-EMMC-per-submit-7
+
+CPU:   Novatek NT @ 1200 MHz
+DRAM:  2 GiB
+Relocation to 0x61f5e000, Offset is 0x01f5e000 sp at 61c18ae0
+nvt_shminfo_init:  The fdt buffer addr: 0x61c1e800
+otp_init[1.00.002]
+120MHz
+otp_timing_reg= 0xff6050
+Read power trim = 0x00000000
+remap_data 8
+pwm_pinmux = 0x1
+pwm_id(0) pwm_pinmux(0x1)
+pclk_freq(30000000) div(3)
+do_nvt_pcie_getid: get id : 0x183c
+ CONFIG_MEM_SIZE                =      0x80000000
+ CONFIG_NVT_UIMAGE_SIZE         =      0x01900000
+ CONFIG_NVT_ALL_IN_ONE_IMG_SIZE =      0x07800000
+ CONFIG_UBOOT_SDRAM_BASE        =      0x60000000
+ CONFIG_UBOOT_SDRAM_SIZE        =      0x02000000
+ CONFIG_LINUX_SDRAM_BASE        =      0x02000000
+ CONFIG_LINUX_SDRAM_SIZE        =      0x3c000000
+ CONFIG_LINUX_SDRAM_START       =      0x5e700000
+NAND:  0 MiB
+MMC:   sdio pinmux(0x70)
+NVT_MMC1: 1
+Loading Environment from MMC... Partition table is empty
+*** Warning - bad CRC, using default environment
+
+switch to partitions #0, OK
+mmc1(part 0) is current device
+nvt_emmc_set_bootbus: Set EMMC boot bus to 8-bit mode
+ misc_init_r: boot time: 2810444(us)
+DTS find cpu freq clock 1200MHz
+Set CPU clk 1200MHz
+ nvt_dts_config_parsing: Label: loader PartitionOffset=0 PartitionSize=40000
+ nvt_dts_config_parsing: Label: fdt PartitionOffset=40000 PartitionSize=40000
+ nvt_dts_config_parsing: Label: fdt.restore PartitionOffset=80000 PartitionSize=40000
+ nvt_dts_config_parsing: Label: atf PartitionOffset=c0000 PartitionSize=40000
+ nvt_dts_config_parsing: Label: uboot PartitionOffset=100000 PartitionSize=1c0000
+ nvt_dts_config_parsing: Label: ubootenv PartitionOffset=2c0000 PartitionSize=40000
+ nvt_dts_config_parsing: Label: bootlogo PartitionOffset=440000 PartitionSize=100000
+ nvt_dts_config_parsing: Label: boot-flag PartitionOffset=540000 PartitionSize=2000
+ nvt_dts_config_parsing: Label: system-info PartitionOffset=542000 PartitionSize=200000
+ nvt_dts_config_parsing: Label: config PartitionOffset=742000 PartitionSize=2000000
+ nvt_dts_config_parsing: Label: device-pack PartitionOffset=2742000 PartitionSize=1000000
+ nvt_dts_config_parsing: Label: main-boot-script PartitionOffset=3742000 PartitionSize=80000
+ nvt_dts_config_parsing: Label: main-kernel PartitionOffset=37c2000 PartitionSize=4000000
+ nvt_dts_config_parsing: Label: main-rootfs PartitionOffset=77c2000 PartitionSize=20000000
+ nvt_dts_config_parsing: Label: backup-boot-script PartitionOffset=277c2000 PartitionSize=80000
+ nvt_dts_config_parsing: Label: backup-kernel PartitionOffset=27842000 PartitionSize=4000000
+ nvt_dts_config_parsing: Label: backup-rootfs PartitionOffset=2b842000 PartitionSize=20000000
+ nvt_dts_config_parsing: Label: user-data PartitionOffset=80000000 PartitionSize=600000
+ misc_init_r: boot time: 3040411(us)
+Net:   na51090_eth_initialize 1.0.0.2
+na51090_eth_initialize: dtb node /eth0@2,f0200000 found
+eqos_initialize 0x2f0200000
+eth_parse_phy_intf: get IO MEM 0x2f0200000
+DTS /eth0@2,f0200000 found
+eth_parse_phy_intf: ref-clk-out 0
+eth_parse_phy_intf: pinmux detect RGMII 0x501501
+reset eth0 phy
+setup eth0 phy
+na51090_eth_initialize: dtb node /eth1@2,f0210000 found
+eqos_initialize 0x2f0210000
+eth_parse_phy_intf: get IO MEM 0x2f0210000
+DTS /eth1@2,f0210000 found
+eth_parse_phy_intf: ref-clk-out 0
+eth_parse_phy_intf: pinmux detect RGMII 0x501501
+reset eth1 phy
+setup eth1 phy
+eth0, eth1
+Hit any key to stop autoboot:  0
+run main firmware
+
+MMC read: dev # 1, block # 113168, count 1024 ... 1024 blocks read: OK
+
+## Checking Image at 02000000 ...
+Unknown image format!
+run backup firmware
+
+MMC read: dev # 1, block # 1293840, count 1024 ... 1024 blocks read: OK
+
+## Checking Image at 02000000 ...
+Unknown image format!
+nvt@na51090: mmc partconf 1 1 1 0
+nvt@na51090: mmc hwpartition user wrrel on gp1 1196032 wrrel on gp2 1196032 wrrel on gp3 524288 wrrel on gp4 524288 wrrel on complete
+Partition configuration:
+        No enhanced user data area
+        User partition write reliability: on
+        GP1 Capacity: 584 MiB
+        GP1 write reliability: on
+        GP2 Capacity: 584 MiB
+        GP2 write reliability: on
+        GP3 Capacity: 256 MiB
+        GP3 write reliability: on
+        GP4 Capacity: 256 MiB
+        GP4 write reliability: on
+Partitioning successful, power-cycle to make effective
+nvt@na51090: reset
+resetting ...
+nv攓E8>T
+UNZOK!PCK[120]
+table1
+DRAM1_DDR4x2_2400_32B ini_ver: 0x51210723
+zq_trim[e], ldo_trim[6]
+CPU1200 DONE
+>RPA
+table1
+DRAM2_DDR4x2_2400_32B ini_ver: 0x51210723
+ddr2 zq_trim[e], ldo_trim[4]
+ddr init done
+HVYOK
+UNZOK!
+Loader Start ...
+LD_VER 02.00.04
+
+336_DRAM1_1200_8192Mb_8192Mb_DRAM2_1200_8192Mb_8192Mb 11/26/2021 19:46:36
+
+SD identify fail
+card open fail
+EMMC: 8 bits
+EMMC
+RRtmp_addr 0x08000000
+LdCtrl2 0x00000000
+l_bl31
+RRbl31_addr 0x01F00000
+bl31_size 0x00007120
+l_uboot
+Ruboot_addr 0x60000000
+Ruboot_size 0x0007C238
+core_cnt= 0x00000004
+smp(bl31)
+fdt 0x00100000
+shm 0x00A00000
+        core2_jump 0xFE0005C0
+  code2JumpCodelen 0x00000010
+      core2_entry2 0x00010000
+       core2_entry 0xFE0005D0
+ code2EntryCodelen 0x00000188
+      core2_entry2 0x00010000
+bl_core2_reset
+$$$64wfi646w4wffii64core2_jump_program 0x00205325
+64code2JumpCodelen 0x0000018C
+warm reset core0
+jump_entry 0x01F00000
+ARC64warmwarrmsrtstwarmrst***2431###NOTICE:  BL31: v2.2(release):
+NOTICE:  BL31: Built : 15:10:58, Oct 29 2021
+NOTICE:  BL31: Found DTB
+NOTICE:  TZASC config:
+NOTICE: 0x00100000@0x01f00000   (RW/N)  Ree
+INFO:    ARM GICv2 driver initialized
+INFO:    BL31: Platform setup done
+INFO:    BL31: Initializing runtime services
+INFO:    BL31: Preparing for EL3 exit to normal world
+INFO:    Entry point address = 0x60000000
+INFO:    SPSR = 0x3c9
+
+
+U-Boot 2019.04 (Jan 28 2022 - 09:00:40 +0000), Build: jenkins-VVTK-NT98336-EMMC-per-submit-7
+
+CPU:   Novatek NT @ 1200 MHz
+DRAM:  2 GiB
+Relocation to 0x61f5e000, Offset is 0x01f5e000 sp at 61c18ae0
+nvt_shminfo_init:  The fdt buffer addr: 0x61c1e800
+otp_init[1.00.002]
+120MHz
+otp_timing_reg= 0xff6050
+Read power trim = 0x00000000
+remap_data 8
+pwm_pinmux = 0x1
+pwm_id(0) pwm_pinmux(0x1)
+pclk_freq(30000000) div(3)
+do_nvt_pcie_getid: get id : 0x183c
+ CONFIG_MEM_SIZE                =      0x80000000
+ CONFIG_NVT_UIMAGE_SIZE         =      0x01900000
+ CONFIG_NVT_ALL_IN_ONE_IMG_SIZE =      0x07800000
+ CONFIG_UBOOT_SDRAM_BASE        =      0x60000000
+ CONFIG_UBOOT_SDRAM_SIZE        =      0x02000000
+ CONFIG_LINUX_SDRAM_BASE        =      0x02000000
+ CONFIG_LINUX_SDRAM_SIZE        =      0x3c000000
+ CONFIG_LINUX_SDRAM_START       =      0x5e700000
+NAND:  0 MiB
+MMC:   sdio pinmux(0x70)
+NVT_MMC1: 1
+Loading Environment from MMC... Partition table is empty
+*** Warning - bad CRC, using default environment
+
+switch to partitions #0, OK
+mmc1(part 0) is current device
+nvt_emmc_set_bootbus: Set EMMC boot bus to 8-bit mode
+ misc_init_r: boot time: 2749400(us)
+DTS find cpu freq clock 1200MHz
+Set CPU clk 1200MHz
+ nvt_dts_config_parsing: Label: loader PartitionOffset=0 PartitionSize=40000
+ nvt_dts_config_parsing: Label: fdt PartitionOffset=40000 PartitionSize=40000
+ nvt_dts_config_parsing: Label: fdt.restore PartitionOffset=80000 PartitionSize=40000
+ nvt_dts_config_parsing: Label: atf PartitionOffset=c0000 PartitionSize=40000
+ nvt_dts_config_parsing: Label: uboot PartitionOffset=100000 PartitionSize=1c0000
+ nvt_dts_config_parsing: Label: ubootenv PartitionOffset=2c0000 PartitionSize=40000
+ nvt_dts_config_parsing: Label: bootlogo PartitionOffset=440000 PartitionSize=100000
+ nvt_dts_config_parsing: Label: boot-flag PartitionOffset=540000 PartitionSize=2000
+ nvt_dts_config_parsing: Label: system-info PartitionOffset=542000 PartitionSize=200000
+ nvt_dts_config_parsing: Label: config PartitionOffset=742000 PartitionSize=2000000
+ nvt_dts_config_parsing: Label: device-pack PartitionOffset=2742000 PartitionSize=1000000
+ nvt_dts_config_parsing: Label: main-boot-script PartitionOffset=3742000 PartitionSize=80000
+ nvt_dts_config_parsing: Label: main-kernel PartitionOffset=37c2000 PartitionSize=4000000
+ nvt_dts_config_parsing: Label: main-rootfs PartitionOffset=77c2000 PartitionSize=20000000
+ nvt_dts_config_parsing: Label: backup-boot-script PartitionOffset=277c2000 PartitionSize=80000
+ nvt_dts_config_parsing: Label: backup-kernel PartitionOffset=27842000 PartitionSize=4000000
+ nvt_dts_config_parsing: Label: backup-rootfs PartitionOffset=2b842000 PartitionSize=20000000
+ nvt_dts_config_parsing: Label: user-data PartitionOffset=80000000 PartitionSize=600000
+ misc_init_r: boot time: 2979366(us)
+Net:   na51090_eth_initialize 1.0.0.2
+na51090_eth_initialize: dtb node /eth0@2,f0200000 found
+eqos_initialize 0x2f0200000
+eth_parse_phy_intf: get IO MEM 0x2f0200000
+DTS /eth0@2,f0200000 found
+eth_parse_phy_intf: ref-clk-out 0
+eth_parse_phy_intf: pinmux detect RGMII 0x501501
+reset eth0 phy
+setup eth0 phy
+na51090_eth_initialize: dtb node /eth1@2,f0210000 found
+eqos_initialize 0x2f0210000
+eth_parse_phy_intf: get IO MEM 0x2f0210000
+DTS /eth1@2,f0210000 found
+eth_parse_phy_intf: ref-clk-out 0
+eth_parse_phy_intf: pinmux detect RGMII 0x501501
+reset eth1 phy
+setup eth1 phy
+eth0, eth1
+Hit any key to stop autoboot:  0
+run main firmware
+
+MMC read: dev # 1, block # 113168, count 1024 ... 1024 blocks read: OK
+
+## Checking Image at 02000000 ...
+Unknown image format!
+run backup firmware
+
+MMC read: dev # 1, block # 1293840, count 1024 ... 1024 blocks read: OK
+
+## Checking Image at 02000000 ...
+Unknown image format!
+nvt@na51090: mmc info
+Device: NVT_MMC1
+Manufacturer ID: 15
+OEM: 100
+Name: 8GTF4
+Bus Speed: 52000000
+Mode : MMC High Speed (52MHz)
+Rd Block Len: 512
+MMC version 5.1
+High Capacity: Yes
+Capacity: 7.3 GiB
+Bus Width: 8-bit
+Erase Group Size: 512 KiB
+HC WP Group Size: 8 MiB
+User Capacity: 7.3 GiB WRREL
+Boot Capacity: 4 MiB ENH
+RPMB Capacity: 512 KiB ENH
+GP1 Capacity: 584 MiB WRREL
+GP2 Capacity: 584 MiB WRREL
+GP3 Capacity: 256 MiB WRREL
+GP4 Capacity: 256 MiB WRREL
+nvt@na51090: setenv ipaddr 10.135.13.05
+nvt@na51090: setenv serverip 10.135.13.50
+nvt@na51090: mw 0x30000000 0 0x200000
+nvt@na51090: tftp 0x30000000 flash_firmware_to_gpp.img
+eth0 Waiting for PHY auto negotiation to complete......... TIMEOUT !
+phy_startup() failed: -1ERROR: eth0 FAILED: -1
+eth1 Waiting for PHY auto negotiation to complete......... TIMEOUT !
+phy_startup() failed: -1ERROR: eth1 FAILED: -1
+nvt@na51090: tftp 0x30000000 flash_firmware_to_gpp.img.
+eth0 Waiting for PHY auto negotiation to complete......... TIMEOUT !
+phy_startup() failed: -1ERROR: eth0 FAILED: -1
+Using eth1 device
+TFTP from server 10.135.13.50; our IP address is 10.135.13.5
+Filename 'flash_firmware_to_gpp.img.'.
+Load address: 0x30000000
+Loading: *
+TFTP error: 'File not found' (1)
+Not retrying...
+nvt@na51090: tftp 0x30000000 flash_firmware_to_gpp.img
+Unknown command 'tftp' - try 'help'
+nvt@na51090: tftp 0x30000000 flash_firmware_to_gpp.img
+Unknown command 'tftp' - try 'help'
+nvt@na51090: tftp 0x30000000 flash_firmware_to_gpp.img
+Using eth1 device
+TFTP from server 10.135.13.50; our IP address is 10.135.13.5
+Filename 'flash_firmware_to_gpp.img'.
+Load address: 0x30000000
+Loading: #
+         1020.5 KiB/s
+done
+Bytes transferred = 2090 (82a hex)
+nvt@na51090: source 0x30000000
+## Executing script at 30000000
+Using eth1 device
+TFTP from server 10.135.13.50; our IP address is 10.135.13.5
+Filename 'uboot.img'.
+Load address: 0x30000000
+Loading: #######################################
+         2.4 MiB/s
+done
+Bytes transferred = 559424 (88940 hex)
+
+MMC write: dev # 1, block # 0, count 1093 ... 1093 blocks written: OK
+
+MMC write: dev # 1, block # 0, count 1093 ... 1093 blocks written: OK
+Using eth1 device
+TFTP from server 10.135.13.50; our IP address is 10.135.13.5
+Filename 'bootScript.img'.
+Load address: 0x30000000
+Loading: #
+         621.1 KiB/s
+done
+Bytes transferred = 636 (27c hex)
+
+MMC write: dev # 1, block # 4096, count 2 ... 2 blocks written: OK
+
+MMC write: dev # 1, block # 4096, count 2 ... 2 blocks written: OK
+Using eth1 device
+TFTP from server 10.135.13.50; our IP address is 10.135.13.5
+Filename 'Image.bin'.
+Load address: 0x30000000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         ##################################
+         2.4 MiB/s
+done
+Bytes transferred = 6224234 (5ef96a hex)
+
+MMC write: dev # 1, block # 5120, count 12157 ... 12157 blocks written: OK
+
+MMC write: dev # 1, block # 5120, count 12157 ... 12157 blocks written: OK
+Using eth1 device
+TFTP from server 10.135.13.50; our IP address is 10.135.13.5
+Filename 'initrd.sqfs'.
+Load address: 0x30000000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #######################################################################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         ###############################################
+         2.2 MiB/s
+done
+Bytes transferred = 136966144 (829f000 hex)
+
+MMC write: dev # 1, block # 136192, count 267513 ... 267513 blocks written: OK
+
+MMC write: dev # 1, block # 136192, count 267513 ... 267513 blocks written: OK
+
+MMC write: dev # 1, block # 0, count 4097 ... 4097 blocks written: OK
+
+MMC write: dev # 1, block # 0, count 65537 ... 65537 blocks written: OK
+Using eth1 device
+TFTP from server 10.135.13.50; our IP address is 10.135.13.5
+Filename 'device_pack.clone'.
+Load address: 0x102000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         ######################################
+         1.8 MiB/s
+done
+Bytes transferred = 16777216 (1000000 hex)
+
+MMC write: dev # 1, block # 2064, count 32769 ... 32769 blocks written: OK
+
+MMC write: dev # 1, block # 2048, count 17 ... 17 blocks written: OK
+nvt@na51090: reset
+resetting ...
+nv攓E8>T
+UNZOK!PCK[120]
+table1
+DRAM1_DDR4x2_2400_32B ini_ver: 0x51210723
+zq_trim[e], ldo_trim[6]
+CPU1200 DONE
+>RPA
+table1
+DRAM2_DDR4x2_2400_32B ini_ver: 0x51210723
+ddr2 zq_trim[e], ldo_trim[4]
+ddr init done
+HVYOK
+UNZOK!
+Loader Start ...
+LD_VER 02.00.04
+
+336_DRAM1_1200_8192Mb_8192Mb_DRAM2_1200_8192Mb_8192Mb 11/26/2021 19:46:36
+
+SD identify fail
+card open fail
+EMMC: 8 bits
+EMMC
+RE:invalid dtb
+load fdt failed
+NE8>T
+UNZOK!PCK[120]
+table1
+DRAM1_DDR4x2_2400_32B ini_ver: 0x51210723
+zq_trim[e], ldo_trim[6]
+CPU1200 DONE
+>RPA
+table1
+DRAM2_DDR4x2_2400_32B ini_ver: 0x51210723
+ddr2 zq_trim[e], ldo_trim[4]
+ddr init done
+HVYOK
+UNZOK!
+Loader Start ...
+LD_VER 02.00.04
+
+336_DRAM1_1200_8192Mb_8192Mb_DRAM2_1200_8192Mb_8192Mb 11/26/2021 19:46:36
+
+SD identify fail
+card open fail
+EMMC: 8 bits
+EMMC
+RE:invalid dtb
+load fdt failed
+NE8>T
+UNZOK!PCK[120]
+table1
+DRAM1_DDR4x2_2400_32B ini_ver: 0x51210723
+zq_trim[e], ldo_trim[6]
+CPU1200 DONE
+>RPA
+table1
+DRAM2_DDR4x2_2400_32B ini_ver: 0x51210723
+ddr2 zq_trim[e], ldo_trim[4]
+ddr init done
+HVYOK
+UNZOK!
+Loader Start ...
+LD_VER 02.00.04
+
+336_DRAM1_1200_8192Mb_8192Mb_DRAM2_1200_8192Mb_8192Mb 11/26/2021 19:46:36
+
+SD identify fail
+card open fail
+EMMC: 8 bits
+EMMC
+RE:invalid dtb
+load fdt failed
+NE8>T
+UNZOK!PCK[120]
+table1
+DRAM1_DDR4x2_2400_32B ini_ver: 0x51210723
+zq_trim[e], ldo_trim[6]
+CPU1200 DONE
+>RPA
+table1
+DRAM2_DDR4x2_2400_32B ini_ver: 0x51210723
+ddr2 zq_trim[e], ldo_trim[4]
+ddr init done
+HVYOK
+UNZOK!
+Loader Start ...
+LD_VER 02.00.04
+
+336_DRAM1_1200_8192Mb_8192Mb_DRAM2_1200_8192Mb_8192Mb 11/26/2021 19:46:36
+
+SD identify fail
+card open fail
+EMMC: 8 bits
+EMMC
+RE:invalid dtb
+load fdt failed
+NE8>T
+UNZOK!PCK[120]
+table1
+DRAM1_DDR4x2_2400_32B ini_ver: 0x51210723
+zq_trim[e], ldo_trim[6]
+CPU1200 DONE
+>RPA
+table1
+DRAM2_DDR4x2_2400_32B ini_ver: 0x51210723
+ddr2 zq_trim[e], ldo_trim[4]
+ddr init done
+HVYOK
+UNZOK!
+Loader Start ...
+LD_VER 02.00.04
+
+336_DRAM1_1200_8192Mb_8192Mb_DRAM2_1200_8192Mb_8192Mb 11/26/2021 19:46:36
+
+SD identify fail
+card open fail
+EMMC: 8 bits
+EMMC
+RE:invalid dtb
+load fdt failed
+
